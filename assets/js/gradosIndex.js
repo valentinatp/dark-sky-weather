@@ -27,7 +27,66 @@ $(document).ready(function() {
         $("#pressure").append(data.currently.pressure + ' hPa');
 
   })
+  .done(function(data){
 
+      function calculoCelsiusUno(a,b){
+        var calculoUno = parseInt(data.daily.data[0].temperatureMin) - 32 / (1.8);
+        var calculoDos = parseInt(data.daily.data[0].temperatureMax) - 32 / (1.8)
+        var res = (Math.round(calculoUno) + '°') + ' ' + '-' + ' '+ (Math.round(calculoDos) + '°');
+        return res;
+      }
+
+      function calculoCelsiusDos(a,b){
+        var calculoUno = parseInt(data.daily.data[1].temperatureMin) - 32 / (1.8);
+        var calculoDos = parseInt(data.daily.data[1].temperatureMax) - 32 / (1.8)
+        var res = (Math.round(calculoUno) + '°') + ' ' + '-' + ' '+ (Math.round(calculoDos) + '°');
+        return res;
+      }
+
+      function calculoCelsiusTres(a,b){
+        var calculoUno = parseInt(data.daily.data[2].temperatureMin) - 32 / (1.8);
+        var calculoDos = parseInt(data.daily.data[2].temperatureMax) - 32 / (1.8)
+        var res = (Math.round(calculoUno) + '°') + ' ' + '-' + ' '+ (Math.round(calculoDos) + '°');
+        return res;
+      }
+
+      function calculoCelsiusCuatro(a,b){
+        var calculoUno = parseInt(data.daily.data[3].temperatureMin) - 32 / (1.8);
+        var calculoDos = parseInt(data.daily.data[3].temperatureMax) - 32 / (1.8)
+        var res = (Math.round(calculoUno) + '°') + ' ' + '-' + ' '+ (Math.round(calculoDos) + '°');
+        return res;
+      }
+
+      function calculoCelsiusCinco(a,b){
+        var calculoUno = parseInt(data.daily.data[4].temperatureMin) - 32 / (1.8);
+        var calculoDos = parseInt(data.daily.data[4].temperatureMax) - 32 / (1.8)
+        var res = (Math.round(calculoUno) + '°') + ' ' + '-' + ' '+ (Math.round(calculoDos) + '°');
+        return res;
+      }
+
+      function calculoCelsiusSeis(a,b){
+        var calculoUno = parseInt(data.daily.data[5].temperatureMin) - 32 / (1.8);
+        var calculoDos = parseInt(data.daily.data[5].temperatureMax) - 32 / (1.8)
+        var res = (Math.round(calculoUno) + '°') + ' ' + '-' + ' '+ (Math.round(calculoDos) + '°');
+        return res;
+      }
+
+      function calculoCelsiusSiete(a,b){
+        var calculoUno = parseInt(data.daily.data[6].temperatureMin) - 32 / (1.8);
+        var calculoDos = parseInt(data.daily.data[6].temperatureMax) - 32 / (1.8)
+        var res = (Math.round(calculoUno) + '°') + ' ' + '-' + ' '+ (Math.round(calculoDos) + '°');
+        return res;
+      }
+
+      $("#monday").append(calculoCelsiusUno);
+      $("#tuesday").append(calculoCelsiusDos);
+      $("#wednesday").append(calculoCelsiusTres);
+      $("#thursday").append(calculoCelsiusCuatro);
+      $("#friday").append(calculoCelsiusCinco);
+      $("#saturday").append(calculoCelsiusSeis);
+      $("#sunday").append(calculoCelsiusSiete);
+
+  })
   .fail(function() {
     console.log("error");
   })
