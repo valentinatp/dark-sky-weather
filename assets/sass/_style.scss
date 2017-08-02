@@ -1,0 +1,77 @@
+#seccion-completa{
+	background-image: url('http://www.care.org.pe/wp-content/uploads/2013/06/3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
+	#cuadro{
+		background-color: $color_fondo;
+		height: 100vh;
+	}
+	div{
+		.contenedor-datos{
+			margin-top: 200px;
+		}
+	}
+}
+
+
+div{
+	div{
+		div{
+			div{
+				div{
+					div{
+						div{
+							h1{
+								font-family: 'Lato', sans-serif;
+								font-weight: 600;
+								text-transform: uppercase;
+							}
+							h3{
+								font-family: 'Roboto', sans-serif;
+								font-weight: 600;
+								font-size: 30px;
+							}
+						}
+						h4{
+							font-family: 'Roboto', sans-serif;
+							font-weight: 600;
+							margin: 5px 0;
+						}
+					}
+				}
+				button{
+					border: none;
+					background-color: $color_boton;
+					padding: 10px 15px;
+					text-transform: uppercase;
+					font-weight: 600;
+					font-family: 'Lato', sans-serif;
+					border-radius: 15px;
+					color: $color_texto_boton;
+				}
+			}
+		}
+	}
+}
+
+div{
+	div{
+		div{
+			div{
+				div{
+					div{
+						a{
+							i{
+								color: $color_negro;
+								font-size: 60px;
+								margin: 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
