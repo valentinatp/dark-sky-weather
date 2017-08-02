@@ -6,8 +6,11 @@ $(document).ready(function() {
   });
 
 
+//var long = longitud.val();
+//var lat = latitud.val();
+
   $.ajax({
-    url: 'https://api.darksky.net/forecast/8fe9d2d70d0d13ff0c4d66bd56b0a9ef/37.8267,-122.4233',
+    url: 'https://api.darksky.net/forecast/8fe9d2d70d0d13ff0c4d66bd56b0a9ef/37.8267,-122.4233', // +long + lat,
     type: 'GET',
     dataType: 'jsonp',
   })
@@ -94,3 +97,37 @@ $(document).ready(function() {
 
 
 });
+
+
+/*LLAME A LA UBICACIÓN Y FUNCIONABA A RATOS. </3
+
+function initMap(){
+
+  function buscar(){
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(funcionExito, funcionError);
+    }
+  }
+  addEventListener("load", buscar);
+
+  var latitud,longitud;
+
+  var funcionExito = function(posicion){
+    latitud = posicion.coords.latitude;
+    longitud = posicion.coords.longitude;
+
+    var miUbicacion = new google.maps.Marker({
+      position: {lat:latitud, lng:longitud},
+      animation: google.maps.Animation.DROP,
+      map: map,
+    });
+
+    map.setZoom(17);
+    map.setCenter({lat:latitud, lng:longitud});
+  }
+
+  var funcionError = function(error){
+    alert("Tenemos un problema con encontrar tu ubicación");
+  }
+}
+*/
